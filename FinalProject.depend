@@ -1,0 +1,62 @@
+# depslib dependency file v1.0
+1461798804 source:/home/david/Dropbox/CSCI2270/FinalProject/main.cpp
+	"MarbleMachine.h"
+	<iostream>
+	<stdlib.h>
+
+1461819202 /home/david/Dropbox/CSCI2270/FinalProject/include/MarbleMachine.h
+	"Element.h"
+	<vector>
+	<string>
+
+1461797872 /home/david/Dropbox/CSCI2270/FinalProject/include/Element.h
+	<string>
+
+1461798153 source:/home/david/Dropbox/CSCI2270/FinalProject/src/Element.cpp
+	"Element.h"
+	<iostream>
+
+1461798609 source:/home/david/Dropbox/CSCI2270/FinalProject/src/MarbleMachine.cpp
+	"MarbleMachine.h"
+	"Element.h"
+	"Input.h"
+	"Output.h"
+	"Splitter.h"
+	"Buffer.h"
+	"Straight.h"
+	<iostream>
+	<unistd.h>
+
+1461798987 source:/home/david/Dropbox/CSCI2270/FinalProject/src/Input.cpp
+	"Input.h"
+	<iostream>
+
+1461712227 /home/david/Dropbox/CSCI2270/FinalProject/include/Input.h
+	<Element.h>
+
+1461798998 source:/home/david/Dropbox/CSCI2270/FinalProject/src/Output.cpp
+	"Output.h"
+	<iostream>
+
+1461708574 /home/david/Dropbox/CSCI2270/FinalProject/include/Output.h
+	<Element.h>
+
+1461799111 source:/home/david/Dropbox/CSCI2270/FinalProject/src/Buffer.cpp
+	"Buffer.h"
+
+1461798032 /home/david/Dropbox/CSCI2270/FinalProject/include/Buffer.h
+	<Element.h>
+
+1461798093 /home/david/Dropbox/CSCI2270/FinalProject/include/Splitter.h
+	<Element.h>
+
+1461799099 source:/home/david/Dropbox/CSCI2270/FinalProject/src/Splitter.cpp
+	"Splitter.h"
+	<iostream>
+
+1461789779 /home/david/Dropbox/CSCI2270/FinalProject/include/Straight.h
+	<Element.h>
+
+1461799047 source:/home/david/Dropbox/CSCI2270/FinalProject/src/Straight.cpp
+	"Straight.h"
+
