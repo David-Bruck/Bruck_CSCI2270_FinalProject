@@ -28,15 +28,23 @@ void Splitter::tick()
     if(track[LENGTH-1]!=0)
     {
         outbuffer = track[LENGTH-1];
+        track[LENGTH-1] = 0;
     }
     else
     {
         outbuffer = track2[LENGTH-1];
+        track2[LENGTH-1] = 0;
+    }
+    if(outbuffer != 0)
+    {
+        std::cout<<"Marble "<<outbuffer<<" left splitter. ";
     }
     for(int i = LENGTH-2; i>=0; i--)
     {
         track[i+1] = track[i];
         track2[i+1] = track2[i];
+        track[i] = 0;
+        track2[i] = 0;
     }
     if(!r && inbuffer)
     {

@@ -11,6 +11,7 @@ class Input : public Element
         ~Input();
         void addMarble();
         void tick();
+        void reset();
     protected:
     private:
         int idcount;

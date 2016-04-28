@@ -10,8 +10,6 @@ class Output : public Element
         Output();
         ~Output();
         void tick();
-    protected:
-    private:
 };
 
 #endif // OUTPUT_H

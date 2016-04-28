@@ -27,5 +27,6 @@ private:
     int straight;
     int buffer;
     int splitter;
+
 };
 #endif // MARBLEMACHINE_H

@@ -31,6 +31,7 @@ void printMenu3(MarbleMachine* mm)
     cout << "2. Add marbles by number and duration" << endl;
     cout << "3. Add marbles by rate and number" << endl;
     cout << "4. Remove output and edit track" << endl;
+    cout << "5. Quit" << endl;
 }
 
 int getRate()
@@ -135,7 +136,7 @@ void runRateNum(MarbleMachine* mm)
     if(num == -1)
         return;
 
-    mm->runRN(num,dur);
+    mm->runRN(rate,num);
 }
 
 int main(int argc,char **argv)
@@ -199,11 +200,6 @@ int main(int argc,char **argv)
             }
             case '4':
             {
-                return 0;
-                break;
-            }
-            case '5':
-            {
                 cout<<"Goodbye!"<<endl;
                 return 0;
                 break;
@@ -243,6 +239,12 @@ int main(int argc,char **argv)
             case '4':
             {
                 mm.popElement();
+                break;
+            }
+            case '5':
+            {
+                cout<<"Goodbye!"<<endl;
+                return 0;
                 break;
             }
             default:

@@ -10,7 +10,6 @@ class Element
         virtual ~Element();
         virtual void tick();
         void addMarble(int);
-        int checkOutput();
         void doOutput(int*);
         int* input();
         std::string type;

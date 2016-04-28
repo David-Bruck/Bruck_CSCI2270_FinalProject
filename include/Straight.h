@@ -10,8 +10,6 @@ class Straight : public Element
         Straight(int);
         virtual ~Straight();
         void tick();
-    protected:
-    private:
 };
 
 #endif // STRAIGHT_H

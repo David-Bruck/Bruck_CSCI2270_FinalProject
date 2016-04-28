@@ -39,6 +39,7 @@
 		<Unit filename="include/Input.h" />
 		<Unit filename="include/MarbleMachine.h" />
 		<Unit filename="include/Output.h" />
+		<Unit filename="include/Splitter.h" />
 		<Unit filename="include/Straight.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="src/Buffer.cpp" />
@@ -46,6 +47,7 @@
 		<Unit filename="src/Input.cpp" />
 		<Unit filename="src/MarbleMachine.cpp" />
 		<Unit filename="src/Output.cpp" />
+		<Unit filename="src/Splitter.cpp" />
 		<Unit filename="src/Straight.cpp" />
 		<Extensions>
 			<code_completion />

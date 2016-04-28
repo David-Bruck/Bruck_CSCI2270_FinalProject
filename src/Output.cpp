@@ -9,7 +9,6 @@ Output::Output()
     track[0] = 0;
     inbuffer = 0;
     outbuffer = 0;
-    track[0] = 0;
 }
 
 Output::~Output()

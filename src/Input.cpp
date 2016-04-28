@@ -31,3 +31,8 @@ void Input::tick()
     }
     Element::tick();
 }
+
+void Input::reset()
+{
+    idcount = 1;
+}

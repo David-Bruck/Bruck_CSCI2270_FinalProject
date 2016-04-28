@@ -29,11 +29,6 @@ void Element::addMarble(int m)
     }
 }
 
-int Element::checkOutput()
-{
-    return outbuffer;
-}
-
 void Element::doOutput(int* p)
 {
     *p =  outbuffer;
@@ -48,9 +43,18 @@ int* Element::input()
 void Element::tick()
 {
     outbuffer = track[LENGTH-1];
+    track[LENGTH-1] = 0;
+    if(outbuffer != 0 && this->type != "Input" && this->type != "Output")
+    {
+        std::cout<<"Marble "<<outbuffer<<" left "<<this->type<<". ";
+    }
     for(int i = LENGTH-2; i>=0; i--)
     {
         track[i+1] = track[i];
+    }
+    if(inbuffer != 0 && this->type != "Input" && this->type != "Output")
+    {
+        std::cout<<"Marble "<<inbuffer<<" entered "<<this->type<<". ";
     }
     track[0] = inbuffer;
     inbuffer = 0;

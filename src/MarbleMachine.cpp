@@ -148,14 +148,16 @@ void MarbleMachine::runRD(int rate, int dur)
             }
         }
     }
+    ((Input*)(machine[0]))->reset();
 }
 
 void MarbleMachine::runND(int num, int dur)
 {
-    double d = (double)num/(double)dur;
+    double d = (double)dur/(double)num;
     double f = 0;
     int j = 0;
-    for(int i=0; i<=dur*10; i++)
+    int i;
+    for(i=0; i<=dur*10; i++)
     {
         f+=0.1;
         j++;
@@ -170,6 +172,25 @@ void MarbleMachine::runND(int num, int dur)
         std::cout<<std::endl;
         usleep(100000);
     }
+    bool g;
+    while(g)
+    {
+        g = false;
+        std::cout<<"["<<i*0.1<<"] ";
+        this->tick();
+        std::cout<<std::endl;
+        i++;
+        usleep(100000);
+        for(int j=0; j<machine.size(); j++)
+        {
+            if(machine[j]->active())
+            {
+                g = true;
+                break;
+            }
+        }
+    }
+    ((Input*)(machine[0]))->reset();
 }
 
 void MarbleMachine::runRN(int rate, int num)
@@ -178,7 +199,8 @@ void MarbleMachine::runRN(int rate, int num)
     double f = 0;
     double dur = (double)num/(double)rate;
     int j = 0;
-    for(int i=0; (double)i<=dur*10; i++)
+    int i;
+    for(i=0; (double)i<=dur*10; i++)
     {
         f+=0.1;
         j++;
@@ -193,4 +215,23 @@ void MarbleMachine::runRN(int rate, int num)
         std::cout<<std::endl;
         usleep(100000);
     }
+    bool g;
+    while(g)
+    {
+        g = false;
+        std::cout<<"["<<i*0.1<<"] ";
+        this->tick();
+        std::cout<<std::endl;
+        i++;
+        usleep(100000);
+        for(int j=0; j<machine.size(); j++)
+        {
+            if(machine[j]->active())
+            {
+                g = true;
+                break;
+            }
+        }
+    }
+    ((Input*)(machine[0]))->reset();
 }
